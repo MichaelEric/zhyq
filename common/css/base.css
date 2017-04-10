@@ -1,0 +1,9 @@
+*{padding: 0;margin: 0;font-family: "微软雅黑";outline: none;border: none;}
+a,a:hover,a:link,a:visited{text-decoration: none;color: #000;}
+ul,li{list-style: none;}
+.fr{float: right;}
+.fl{float: left;}
+.clear{overflow: hidden;}
+a:hover,a:link{text-decoration: none;}
+a:hover{cursor: pointer;}
+a:focus{outline:none;}

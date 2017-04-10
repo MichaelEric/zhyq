@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* Pagination */
+#Pagination{font-size:80%;padding-right: 3px; padding-left: 3px; padding-bottom: 3px; margin: 12px; padding-top: 12px; text-align: center;margin:0 auto;}    
+#Pagination a{text-decoration:none;border:solid 1px #dbdbdb;color:#23b7e5;}
+#Pagination a,#Pagination span{display:inline-block;padding:6px 12px;margin-right:5px;margin-bottom:5px;}
+#Pagination .current{background: #23b7e5;border-color: #23b7e5;border:solid 1px #23b7e5;}
+#Pagination .current.prev, #Pagination .current.next{color:#999;border-color:#999;background:#fff;}
+.page-sum{font-size:15px;color: #23b7e5;}
+#pagevalue{text-align: center;width:50px;height:31px;border:1px solid #dbdbdb;outline: none;}
+input[type=number] {  
+    -moz-appearance:textfield;  
+}  
+input[type=number]::-webkit-inner-spin-button,  
+input[type=number]::-webkit-outer-spin-button {  
+    -webkit-appearance: none;  
+    margin: 0;  
+}  

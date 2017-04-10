@@ -1,0 +1,62 @@
+<div>
+	<a class="btn btn-info btn-lg"  ng-click="order(page)" target="_self">返回</a>
+</div>
+	<div class="detail_main">
+		<div style="width:100%;">
+			<header class="status" >
+			<span ng-repeat="m in status_list">
+				<b>{{m.status_name}}</b>
+			</span>
+		</header>
+		</div>
+		
+		<section style="clear:both">
+			<ul>
+				<li ng-repeat="n in status_detail" class="{{n.liclassname}}"><span>{{n.text}}</span><span class="{{n.childclassname}}">{{n.value}}</span></li>
+				<!--<li><span>预约人姓名</span><span>小刘</span></li>
+				<li><span>联系电话</span><span >18210619089</span></li>
+				<li><span>下单时间</span><span class="xdtime">2016-9-8</span></li>
+				<li><span>预约时间</span><span>2016-9-8</span></li>
+				<li><span>预约内容</span><span>按着预约时间来我公司打扫卫生</span></li>
+				<li><span>接单负责人</span><span class="xdtime">王玉共18210169089</span></li>
+				<li><span>应付费用</span><span class="fepay">120</span></li>
+				<li><span>费用备注</span><span>卫生费</span></li>
+				<li><span>付款方式</span><span>线上</span></li>
+				<li><span>实付费用</span><span class="fepay">120</span></li>-->
+				</ul>
+				<ul ng-show="statusss3">
+				<li><span>实付费用</span><span ><input type="number" ng-model="paymoney"/>元</span></li>
+				<li><span>收费备注</span><span class="bz"><textarea ng-model="paybz"></textarea></span></li>
+				</ul>
+				<div style="width:500px;text-align:center;padding-left:10px;" >
+					<button class="btn btn-info" ng-show="statusss" data-toggle="modal" data-target="#myModal"   id="assign" style="margin-right:20px;"  iid="{{m_id}}">指派</button>
+					<button class="btn btn-info" ng-show="statusss3" ng-click="pay(m_id)">确认</button>
+					<button class="btn cancle"  ng-show="statusss2" ng-click="cancle(m_id,m_appId,staffphone)">取消</button> 
+				</div>
+				
+					
+			
+			
+		</section>
+	</div>
+  <div class="modal fade " id="myModal" tabindex="-1" role="dialog"  aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel">
+					请选择指派人员
+				</h4>
+			</div>
+			<div class="modal-body">
+				<select class="selectpicker show-tick form-control" ng-options="a.name for a in assignlist" ng-model="chosename">
+				</select>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭
+				</button>
+				<button type="button" ng-click="ZP()" class="btn btn-primary btn-lg" data-dismiss="modal">
+					确定
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->

@@ -1,0 +1,40 @@
+var myapp=angular.module("ngApp",['ui.router']);
+ myapp.controller("appCtrl",function($scope,$state,$http,$window){
+ 	
+ })
+myapp.config(function($stateProvider){
+	$stateProvider
+	.state("order",{
+		url:"/order",
+		params:{page:1},
+		templateUrl:"tpl/order.html",//服务预约
+		controller:"orderCtrl"
+	})
+	.state("property_repair",{
+		url:"/property_repair",
+		templateUrl:"tpl/property_repair.html",//物品报修
+		controller:"property_repairCtrl"
+	})
+	.state("detail",{
+		url:"/detail",
+		params:{id:null,page:1},
+		templateUrl:"tpl/detail/order_detail.html",
+		controller:"orderdetailCtrl"
+	})
+	.state("property_repairdetail",{
+		templateUrl:"tpl/detail/property_repairdetail.html",
+		controller:"repairdetailCtrl"
+	})
+    .state("shop",{
+		url:"/detail/shop",
+        params:{id:null,page:1},
+        templateUrl:"tpl/shop.html",
+        controller:"shopCtrl"
+    })
+    .state("shopAdd",{
+        url:"/detail/shopAdd",
+        params:{id:null,page:1},
+        templateUrl:"tpl/detail/shop_detail.html",
+        controller:"shopdetailCtrl"
+    })
+})

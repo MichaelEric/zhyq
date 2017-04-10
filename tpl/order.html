@@ -1,0 +1,30 @@
+<div>
+	<table class="table table-hover">
+  <caption>服务预约</caption>
+  <thead>
+    <tr>
+      <th>序号</th>
+      <th>服务单号</th>
+      <th>下单时间</th>
+      <th>预约时间</th>
+      <th>业主电话</th>
+      <th>当前状态</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody id="list">
+    <tr ng-repeat="m in orderlist">
+      <td>{{$index + 1}}</td>
+      <td>{{m.id}}</td>
+      <td >{{milliToTime(m.createDate)}}</td>
+      <td>{{m.resertime}}</td>
+      <td>{{m.phone}}</td>
+      <td>{{statusToName(m.status)}}</td>
+      <td ><a class="btn btn-info btn-xs" ng-click="detail(m.id,pagelist)" target="_self">详情</a></td>
+    </tr>
+  </tbody>
+</table>
+        <div class="pages" >
+	        <div id="Pagination"></div>
+	    </div>
+</div>

@@ -1,0 +1,457 @@
+﻿<!DOCTYPE html>
+<html ng-app="ngApp">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="common/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="common/css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="common/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="common/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="common/css/font.css" type="text/css" />
+  <link rel="stylesheet" href="common/css/sweetalert.css" />
+  <link rel="stylesheet" href="common/css/app.css" type="text/css" />
+  <link rel="stylesheet" href="common/css/base.css" type="text/css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="common/css/pagination.css" />
+</head>
+<body ng-controller="appCtrl">
+  <div class="app app-header-fixed" id="app">
+    <!-- navbar -->
+    <div class="app-header navbar">
+    	
+      <!-- navbar header -->
+      <div class="navbar-header bg-dark">
+        <a href="#/" class="navbar-brand text-lt">
+          <i class="fa fa-btc"></i>
+          <span class="hidden-folded m-l-xs">智慧园区</span>
+        </a>
+      </div>
+      <!-- / navbar header -->
+
+      <!-- 顶部导航 -->
+      <div class="collapse pos-rlt navbar-collapse box-shadow bg-white-only">
+        <!-- <!-- navbar 用户头像 隐藏按钮 -->
+        <div class="nav navbar-nav hidden-xs">
+          <a href="#" class="btn no-shadow navbar-btn" data-toggle="class:app-aside-folded" data-target=".app">
+            <i class="fa fa-dedent fa-fw text"></i>
+            <i class="fa fa-indent fa-fw text-active"></i>
+          </a>
+          <a href class="btn no-shadow navbar-btn" data-toggle="class:show" data-target="#aside-user">
+            <i class="icon-user fa-fw"></i>
+          </a>
+        </div>
+        <!-- / navbar 用户头像 隐藏按钮  -->
+
+        <!-- 快速导航 new-->
+        <ul class="nav navbar-nav hidden-sm">
+        	<!--快速导航-->
+          <li class="dropdown pos-stc">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <span>快速导航</span> 
+              <span class="caret"></span>
+            </a>
+            <!--快速导航下拉菜单-->
+            <div class="dropdown-menu wrapper w-full bg-white">
+              <div class="row">
+              	<!--第一列-->	
+                <div class="col-sm-4">
+                  <div class="m-l-xs m-t-xs m-b-xs font-bold">Pages <span class="badge badge-sm bg-success">1</span></div>
+                  	<!--导航name-->
+                  <div class="row">
+                  
+                    <div class="col-xs-6">
+                      <ul class="list-unstyled l-h-2x">
+                        <li>
+                          <a href><i class="fa fa-fw fa-angle-right text-muted m-r-xs"></i>服务预约</a>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                  </div>
+                </div>
+                <!--第一列-->	
+                 <!--第二列-->
+                <div class="col-sm-4 b-l b-light">
+                </div>
+                <!--第二列-->
+             
+              </div>
+            </div>
+              <!--快速导航下拉菜单-->
+          </li>
+          <!--快速导航-->
+          <!--new-->
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <i class="fa fa-fw fa-plus visible-xs-inline-block"></i>
+              <span translate="header.navbar.new.NEW">New</span> <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#" translate="header.navbar.new.PROJECT">Projects</a></li>
+              <li>
+                <a href>
+                  <span class="badge bg-info pull-right">5</span>
+                  <span translate="header.navbar.new.TASK">Task</span>
+                </a>
+              </li>
+              <li><a href translate="header.navbar.new.USER">User</a></li>
+              <li class="divider"></li>
+              <li>
+                <a href>
+                  <span class="badge bg-danger pull-right">4</span>
+                  <span translate="header.navbar.new.EMAIL">Email</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+           <!--new-->
+        </ul>
+        <!-- / 快速导航 new -->
+
+
+        <!-- nabar right -->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+              <i class="icon-bell fa-fw"></i>
+              <span class="visible-xs-inline">通知</span>
+              <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+            </a>
+            <!-- dropdown -->
+            <div class="dropdown-menu w-xl animated fadeInUp">
+              <div class="panel bg-white">
+                <div class="panel-heading b-light bg-light">
+                  <strong>您有 <span>2</span> 条通知</strong>
+                </div>
+                <div class="list-group">
+                  <a href class="media list-group-item">
+                    <span class="pull-left thumb-sm">
+                      <img src="img/a0.jpg" alt="..." class="img-circle">
+                    </span>
+                    <span class="media-body block m-b-none">
+                      消息一<br>
+                      <small class="text-muted">10 minutes ago</small>
+                    </span>
+                  </a>
+                </div>
+                <div class="panel-footer text-sm">
+                  <a href class="pull-right"><i class="fa fa-cog"></i></a>
+                  <a href="#notes" data-toggle="class:show animated fadeInRight">查看所有的通知 </a>
+                </div>
+              </div>
+            </div>
+            <!-- / dropdown -->
+          </li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                <img src="img/a0.jpg" alt="...">
+                <i class="on md b-white bottom"></i>
+              </span>
+              <span class="hidden-sm hidden-md">John.Smith</span> <b class="caret"></b>
+            </a>
+            <!-- dropdown -->
+            <ul class="dropdown-menu animated fadeInRight w">
+              <li class="wrapper b-b m-b-sm bg-light m-t-n-xs">
+                <div>
+                  <p>用户信息</p>
+                </div>
+                <progressbar value="60" class="progress-xs m-b-none bg-white"></progressbar>
+              </li>
+              <li>
+                <a href>
+                  <span class="badge bg-danger pull-right">30%</span>
+                  <span>设置</span>
+                </a>
+              </li>
+              <li>
+                <a ui-sref="app.page.profile">Profile</a>
+              </li>
+              <li>
+                <a ui-sref="app.docs">
+                  <span class="label bg-info pull-right">new</span>
+                  Help
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a ui-sref="access.signin">退出</a>
+              </li>
+            </ul>
+            <!-- / dropdown -->
+          </li>
+        </ul>
+        <!-- / navbar right -->
+
+      </div>
+      <!-- / 顶部导航 -->
+    </div>
+    <!-- / navbar -->
+
+    <!-- 侧边导航 -->
+    <div class="app-aside hidden-xs bg-dark pull-left">
+      <div class="aside-wrap">
+        <div class="navi-wrap">
+          <!-- user 头像-->
+          <div class="clearfix hidden-xs text-center hide" id="aside-user">
+            <div class="dropdown wrapper">
+              <a ui-sref="app.page.profile">
+                <span class="thumb-lg w-auto-folded avatar m-t-sm">
+                  <img src="img/a0.jpg" class="img-full" alt="...">
+                </span>
+              </a>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
+                <span class="clear">
+                  <span class="block m-t-sm">
+                    <strong class="font-bold text-lt">用户</strong> 
+                    <b class="caret"></b>
+                  </span>
+                  <span class="text-muted text-xs block">社区工作者</span>
+                </span>
+              </a>
+              <!-- dropdown -->
+              <ul class="dropdown-menu animated fadeInRight w hidden-folded">
+                <li class="wrapper b-b m-b-sm bg-info m-t-n-xs">
+                  <span class="arrow top hidden-folded arrow-info"></span>
+                  <div>
+                    <p>完善用户信息</p>
+                  </div>
+                  <progressbar value="60" type="white" class="progress-xs m-b-none dker"></progressbar>
+                </li>
+                <li>
+                  <a href>设置</a>
+                </li>
+                <li>
+                  <a href>
+                    <span class="badge bg-danger pull-right">3</span>
+                                                              消息
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a ui-sref="access.signin">退出</a>
+                </li>
+              </ul>
+              <!-- / dropdown -->
+            </div>
+            <div class="line dk hidden-folded"></div>
+          </div>
+          <!-- / user 头像-->
+
+          <!-- nav -->
+          <nav ui-nav class="navi">
+            <ul class="nav">
+              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                <span >社区服务</span>
+              </li>
+              <li>
+                <a href class="auto">      
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                  <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
+                  <span class="font-bold" >广告管理</span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a href>
+                      <span >广告管理</span>
+                    </a>
+                  </li>
+                  <li >
+                    <a ui-sref="order">
+                    	 <b class="label bg-info pull-right">N</b>
+                      <span>首页广告管理</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                    <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                        <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
+                        <span class="font-bold" >物业服务管理</span>
+                    </a>
+                    <ul class="nav nav-sub dk">
+                        <li class="nav-sub-header">
+                            <a href>
+                                <span >物业服务管理</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a ui-sref="order">
+                                <b class="label bg-info pull-right">N</b>
+                                <span>缴费管理</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a ui-sref="property_repair">
+                                <b class="label bg-info pull-right">N</b>
+                                <span>物业报修</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a ui-sref="order">
+                                <b class="label bg-info pull-right">N</b>
+                                <span>服务预约管理</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a ui-sref="order">
+                                <b class="label bg-info pull-right">N</b>
+                                <span>物品放行管理</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a ui-sref="order">
+                                <b class="label bg-info pull-right">N</b>
+                                <span>物业人员管理</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+              <li>
+                    <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                        <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
+                        <span class="font-bold" >会议室管理</span>
+                    </a>
+                    <ul class="nav nav-sub dk">
+                        <li class="nav-sub-header">
+                            <a href>
+                                <span >会议室管理</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a ui-sref="order">
+                                <b class="label bg-info pull-right">N</b>
+                                <span>会议室列表</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a ui-sref="property_repair">
+                                <b class="label bg-info pull-right">N</b>
+                                <span>预约记录</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+              <li>
+                    <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                        <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
+                        <span class="font-bold" >教室管理</span>
+                    </a>
+                    <ul class="nav nav-sub dk">
+                        <li class="nav-sub-header">
+                            <a href>
+                                <span >教室管理</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a ui-sref="order">
+                                <b class="label bg-info pull-right">N</b>
+                                <span>教室列表</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a ui-sref="property_repair">
+                                <b class="label bg-info pull-right">N</b>
+                                <span>预约记录</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+              <li>
+                    <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                        <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
+                        <span class="font-bold" >数据录入管理</span>
+                    </a>
+                    <ul class="nav nav-sub dk">
+                        <li class="nav-sub-header">
+                            <a href>
+                                <span >数据录入管理</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a ui-sref="shop">
+                                <b class="label bg-info pull-right">N</b>
+                                <span>周边商铺管理</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+          </nav>
+          <!-- nav -->
+       
+          <!-- aside footer -->
+          <div class="wrapper m-t">
+            <!--<div class="text-center-folded">-->
+              <!--<span class="pull-right pull-none-folded">60%</span>-->
+              <!--<span class="hidden-folded" translate="aside.MILESTONE">Milestone</span>-->
+            <!--</div>-->
+            <!--<div class="progress progress-xxs m-t-sm dk">-->
+              <!--<div class="progress-bar progress-bar-info" style="width: 60%;">-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="text-center-folded">-->
+              <!--<span class="pull-right pull-none-folded">35%</span>-->
+              <!--<span class="hidden-folded" translate="aside.RELEASE">Release</span>-->
+            <!--</div>-->
+            <!--<div class="progress progress-xxs m-t-sm dk">-->
+              <!--<div class="progress-bar progress-bar-primary" style="width: 35%;">-->
+              <!--</div>-->
+            <!--</div>-->
+          </div>
+          <!-- / aside footer -->
+        </div>
+      </div>
+    </div>
+    <!-- / menu -->
+    <!--main-->
+      <div class="fr mainRight" id="mainRight">
+				  <div ui-view class="content"></div>
+			</div>
+       <!--main-->
+  </div>
+ 
+</body>
+ <!-- jQuery -->
+ 
+</html>
+    <script src="common/js/jquery.min.js"></script>
+    <script src="common/js/angular.min.js" ></script>
+    <script src="common/js/angular-ui-router.min.js" ></script>
+    <script src="common/js/ui-bootstrap-tpls-1.3.2.js"></script>
+    <script src="common/js/sweetalert.min.js"></script>
+    <script src="common/js/jquery.pagination.js"></script>
+    <script src="common/js/bootstrap.js"></script>
+    <script src="js/route.js"></script>
+    <script src="common/js/effect.js"></script>
+    <script src="common/js/loginuserinfo.js"></script>
+    <script src="common/js/page.js"></script>
+    <script src="js/order.js"></script>
+    <script src="js/detailJS/order_detail.js"></script>
+    <script src="js/property_repair.js"></script>
+    <script src="js/detailJS/repair_detail.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/detailJS/shop_detail.js"></script>
+
+    

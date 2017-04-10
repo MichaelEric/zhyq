@@ -1,0 +1,55 @@
+<div>
+  <table class="table table-hover">
+    <caption>周边商铺管理>新增商铺</caption>
+  </table>
+    <form method="post" action="http://rkw.ngrok.cc/wisdompark/surroundShop/addSurroundShop">
+    <div class="top-btn">
+        <button class="btn btn-info btn-xs btn-back"   ng-click="order(page)" target="_self" >返回</button>
+    </div>
+    <div class="shop-info">
+    <div class="top-info">
+        <div class="left-info">
+            <div class="left-info-inp">
+                <label for="shopname" class="info-label">商品名称</label><input type="text" name="name" id="shopname" value="请输入商品名称" />
+            </div>
+            <div  class="left-info-inp">
+                <label for="shoptype" class="info-label">商品类型</label>
+                <select name="" id="shoptype">
+                    <option value="请选择" selected>请选择</option>
+                    <option value="">1111</option>
+                    <option value="">1111</option>
+                </select>
+            </div>
+            <div  class="left-info-inp">
+                <label for="shopNum"  class="info-label">商铺电话</label><input type="text" name="number" id="shopNum" value="请输入商铺电话"/>
+            </div>
+            <div  class="left-info-inp">
+                <label for="shopinfo"  class="info-label">商品简介</label>
+                <textarea name="" id="shopinfo" >请输入商铺简介</textarea>
+            </div>
+        </div>
+        <div class="right-info">
+            <label for="shopimg"  class="info-label">商品图片</label>
+            <div class="info-img">
+                +
+            </div>
+            <div class="put-inp">
+                <input type="file" name="shopimg" id="shopimg">
+            </div>
+        </div>
+    </div>
+    <div class="bottom-info"  class="left-info-inp">
+        <label for="shopname" class="info-label">商铺地址</label><input type="text" name="name" id=""  value="请输入商铺地址" />
+    </div>
+    <div class="bottom-btn"  class="left-info-inp">
+        <input type="submit" >
+        <button class="btn btn-default btn-addShop" ui-sref="shopAdd" role="button">新增</button>
+        <button class="btn btn-default btn-addShop" ui-sref="shopAdd" role="button">取消</button>
+    </div>
+    </div>
+    </form>
+
+  <div class="pages" style="float:left">
+    <div id="Pagination"></div>
+  </div>
+</div>

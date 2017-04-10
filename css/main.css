@@ -1,0 +1,159 @@
+/*order/detail*/
+  .detail_main{width:100%;min-height:900px;background: #fff;text-align: center;}
+  .status{min-width:200px;min-height:100px;overflow: hidden;display: inline-block;}
+  .status span{display: inline-block;width:200px;text-align: center;height:100px;padding-top:50px;float: left;margin-left:-1px;}
+  .status span:nth-child(1){background:url(../img/detail/status_bg1.png) no-repeat center top;} 
+  .status span:nth-child(2){background:url(../img/detail/status_bg2.png) no-repeat center top;}
+  .status span:nth-child(3){background:url(../img/detail/status_bg3.png) no-repeat center top;} .status span:nth-child(4){background:url(../img/detail/status_bg4.png) no-repeat center top;} 
+  .status span:nth-child(5){background:url(../img/detail/status_bg5.png) no-repeat center top;} 
+  .status span:nth-child(6){background:url(../img/detail/status_bg6.png) no-repeat center top;} 
+  .status span b{color:#5ab1f4;font-size:18px;}
+  section{display: inline-block;}
+  section li{width:500px;text-align:left;overflow:hidden;margin-top:10px;}
+   section li span{display: inline-block;}
+  section li span:nth-child(1){min-width:140px;height:40px;color:#666;font-size:24px;float:left;}
+  section li span:nth-child(2){min-width:360px;height:40px;color:#333;font-size:24px;float:right;}
+  section  .Ydcolor span{color:#5ab1f4!important;}
+  .xdtime{color:#5ab1f4!important;text-decoration: underline;}
+  .fepay{color:#ff1b1b!important;}
+  input{width:100px;height:30px;border-radius:5px;border:1px solid #666;text-align: center;}
+  textarea{border:1px solid #666;font-size: 18px;width:300px;min-height:100px;}
+  button{width:150px;height:40px;}
+  .cancle{background: #dbdbdb;color:#fff;}
+  .bz{min-height:100px;}
+  input[type=number] {  
+    -moz-appearance:textfield;  
+}  
+input[type=number]::-webkit-inner-spin-button,  
+input[type=number]::-webkit-outer-spin-button {  
+    -webkit-appearance: none;  
+    margin: 0;  
+}  
+/*order/detail*/
+
+/*新增商铺按钮*/
+.btn-addShop {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/*商铺详情页返回按钮*/
+.top-btn {
+    height: 30px;
+    width: 100%;
+    float:left;
+}
+.top-btn .btn-back  {
+    margin-bottom: 20px;
+    margin-left:20px;
+    width: 60px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.shop-info input{
+    border-color: #ccc;
+    text-align: left;
+    line-height: 30px;
+    float:left;
+    padding-left:10px;
+    /*margin-left:2px;*/
+}
+/*input部分*/
+.top-info {
+    float:left;
+}
+.top-info .left-info {
+    width: 50%;
+    float:left;
+    padding-left:90px;
+}
+.left-info-inp {
+    margin:15px 0;
+    width: 100%;
+    float: left;
+}
+.info-label{
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    float:left;
+}
+.top-info .left-info div:nth-child(odd) input{
+    width: 200px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.top-info .left-info div:last-child label{
+    vertical-align:top;
+}
+.top-info .left-info div:last-child textarea{
+    resize:none;
+    height: 90px;
+    font-size:14px;
+    padding-left:10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border-color: #ccc;
+}
+.top-info .left-info div:nth-child(2) select{
+    border: 1px solid #ccc;
+    width: 150px;
+    height: 40px;
+    padding-left: 10px;
+}
+.top-info .right-info {
+    padding-top:15px;
+    width: 50%;
+    float:right;
+}
+.top-info .right-info label {
+    float:left;
+}
+.top-info .right-info .info-img {
+    width: 150px;
+    height: 150px;
+    margin-left: 70px;
+    text-align: center;
+    line-height: 150px;
+    font-size:50px;
+    color:#000;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.top-info .right-info .put-inp {
+    height: 30px;
+    margin-top: 5px;
+}
+.top-info .right-info input {
+    line-height: 22px;
+    margin-left: 70px;
+    width: 200px;
+    border:none;
+    padding-left: 0;
+}
+.bottom-info {
+    width: 100%;
+    padding-left:90px;
+    float:left;
+}
+.bottom-info input{
+    width: 500px;
+}
+.bottom-btn {
+    width: 100%;
+    margin-top:30px;
+    float:left;
+    padding-left:160px;
+}
+.bottom-btn button {
+    width: 100px;
+    height: 30px;
+}
+.bottom-btn button:first-child {
+    margin-right:50px;
+}
